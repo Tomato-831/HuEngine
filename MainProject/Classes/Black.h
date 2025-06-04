@@ -2,13 +2,17 @@
 
 #include "../HuEngine.h"
 
-class BG {
+class Black {
 public:
 	void Load();
-	void Initialize();
+	void Initialize(HE::Math::Vector2 initial);
 	void Update();
+	void OnCollision();
+	HE::Math::Rectangle GetCollision();
 
 private:
+
 	HE::Sprite sprite_;
+	HE::Sprite collision_sprite;
 
 };

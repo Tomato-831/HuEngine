@@ -3,11 +3,10 @@
 #include "../HuEngine.h"
 #include "../Classes/BG.h"
 #include "../Classes/Player.h"
-#include "../Classes/Player_R.h"
-#include "../Classes/Player_L.h"
 #include "../Classes/Redcar.h"
 #include "../Classes/PlayerDate.h"
 #include "../Classes/PlayerLife.h"
+#include "../Classes/Black.h"
 
 
 class MainScene : public HE::Scene
@@ -27,9 +26,25 @@ public:
 private:
 	BG        bg_;
 	Player    player_;
-	Player_R  player_R;
-	Player_L  player_L;
+	//Player_R  player_R;
+	//Player_L  player_L;
 	Redcar    redcar_;
+
+	Black     black_;
+	Black     black2_;
+	Black     black3_;
+	Black     black4_;
+	Black     black5_;
+
+	Black     black6_;
+	Black     black7_;
+	Black     black8_;
+	Black     black9_;
+	Black     black10_;
+
+
+
+
 
 	HE::Sprite sprite_;
 
