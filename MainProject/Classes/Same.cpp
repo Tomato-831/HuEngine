@@ -2,20 +2,21 @@
 //Redcar.cpp
 //
 
-#include"Redcar.h"
+#include"Same.h"
+#include <wiBacklog.cpp>
 
 using namespace HE;
 
 
 
-void Redcar::Load()
+void Same::Load()
 {
-	sprite_ = Sprite("same.png");
+	sprite_ = Sprite("sameL.png");
 	RenderingPath->AddSprite(&sprite_, -50);
 
 }
 
-void Redcar::Initialize(Math::Vector2 initial)
+void Same::Initialize(Math::Vector2 initial)
 {
 	sprite_.params.siz = Math::Vector2(100.0f, 46.0f);
 	sprite_.params.pos = initial;
@@ -23,17 +24,21 @@ void Redcar::Initialize(Math::Vector2 initial)
 	//	0, 0, sprite_.params.siz.x, sprite_.params.siz.y
 	//));
 
+
 }
 
-void Redcar::Update()
+void Same::Update()
 {
+	
+
 	sprite_.params.pos.x += 400.0f * Time.deltaTime;
 	if (sprite_.params.pos.x >= 1280.0f)
 		sprite_.params.pos.x = -88.0f;
 	sprite_.params.enableMirror();
+
 }
 //“–‚½‚è”»’è
-Math::Rectangle Redcar::GetCollision()
+Math::Rectangle Same::GetCollision()
 {
 	Math::Rectangle collision;
 	collision.x =      (long)sprite_.params.pos.x;
@@ -43,7 +48,7 @@ Math::Rectangle Redcar::GetCollision()
 
 	return collision;
 }
-void Redcar::OnCollision()
+void Same::OnCollision()
 {
 
 	

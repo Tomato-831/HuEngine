@@ -28,19 +28,24 @@ void MainScene::Load()
 	bg_.      Load();
 	player_.  Load();
 
-	redcar_.  Load();
+	same_.    Load();
+	same1_.   Load();
+	same2_.   Load();
+	same3_.   Load();
 
 	black_.   Load();
 	black2_.  Load();
 	black3_.  Load();
 	black4_.  Load();
 	black5_.  Load();
-
 	black6_.  Load();
 	black7_.  Load();
 	black8_.  Load();
 	black9_.  Load();
 	black10_. Load();
+	black11_. Load();
+	black12_. Load();
+	black13_. Load();
 
 
 
@@ -59,22 +64,28 @@ void MainScene::Initialize()
 	bg_.       Initialize();
 	player_.   Initialize();
 
-	redcar_.   Initialize(Math::Vector2(-88.0f *     1.0f,  145.0f));
+	same_.     Initialize(Math::Vector2(-88.0f * 1.0f, 100.0f));
+	same1_.    Initialize(Math::Vector2(-88.0f * 1.0f, 200.0f));
+    same2_.    Initialize(Math::Vector2(-88.0f * 1.0f, 400.0f));
+	same3_.    Initialize(Math::Vector2(-88.0f * 1.0f, 660.0f));
 
 	black_.    Initialize(Math::Vector2(320.0f,  0.0f ));
 	black2_.   Initialize(Math::Vector2(320.0f, 202.0f));
 	black3_.   Initialize(Math::Vector2(320.0f, 404.0f));
 	black4_.   Initialize(Math::Vector2(320.0f, 606.0f));
-
-
 	black5_.   Initialize(Math::Vector2(640.0f, 240.0f));
 	black6_.   Initialize(Math::Vector2(640.0f, 480.0f));
-
-
-	black7_.   Initialize(Math::Vector2(960.0f, 0.0f));
+	black7_.   Initialize(Math::Vector2(960.0f,   0.0f));
 	black8_.   Initialize(Math::Vector2(960.0f, 202.0f));
 	black9_.   Initialize(Math::Vector2(960.0f, 404.0f));
 	black10_.  Initialize(Math::Vector2(960.0f, 606.0f));
+
+	black11_.  Initialize(Math::Vector2(  0.0f, 600.0f));
+
+	black12_.  Initialize(Math::Vector2(  0.0f, 360.0f));
+	black13_.  Initialize(Math::Vector2(  0.0f,  80.0f));
+
+	
 
 
 
@@ -97,7 +108,10 @@ void MainScene::Update(float deltaTime)
 	bg_.       Update();
 	player_.   Update();
 
-	redcar_.   Update();
+	same_.     Update();
+	same1_.    Update();
+	same2_.    Update();
+	same3_.    Update();
 
 	black_.    Update();
 	black2_.   Update();
@@ -110,6 +124,9 @@ void MainScene::Update(float deltaTime)
 	black8_.   Update();
 	black9_.   Update();
 	black10_.  Update();
+	//black11_.  Update();
+	//black12_.  Update();
+	//black13_.  Update();
 
 
 
@@ -119,10 +136,12 @@ void MainScene::Update(float deltaTime)
 
 	//è’ìÀîªíË
 	Math::Rectangle player_collision = player_.GetCollision();
-	Math::Rectangle redcar_collision = redcar_.GetCollision();
-	if (player_collision.Intersects(redcar_collision)) {
+	Math::Rectangle same_collision = same_.GetCollision();
+	Math::Rectangle black_collision = black_.GetCollision();
+	if (player_collision.Intersects(same_collision)) {
 
-		redcar_.OnCollision();
+		same_.OnCollision();
+		black11_.OnCollision();
 	}
 
 

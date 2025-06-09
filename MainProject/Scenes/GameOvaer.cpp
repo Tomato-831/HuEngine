@@ -26,7 +26,7 @@ void GameOver::ResizeLayout()
 void GameOver::Load()
 {
 
-    sprite_gameover_ = Sprite("Gameover.PNG");
+    sprite_gameover_ = Sprite("End2.PNG");
     RenderingPath->AddSprite(&sprite_gameover_, -100);
 
     Scene::Load();

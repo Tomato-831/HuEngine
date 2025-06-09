@@ -26,7 +26,7 @@ void Title::ResizeLayout()
 void Title::Load()
 {
 
-    sprite_title_ = Sprite("Start.png");
+    sprite_title_ = Sprite("title2.png");
     RenderingPath->AddSprite(&sprite_title_, -50);
 
     Scene::Load();
@@ -51,7 +51,7 @@ void Title::Terminate()
 void Title::Update(float deltaTime)
 {
     if (InputSystem.Keyboard.isPressed.Space)
-        SceneManager.SetNextScene(NextScene::MainScene, 1.0f, Color(255, 0, 0));
+        SceneManager.SetNextScene(NextScene::MainScene, 1.0f, Color(100, 100, 255));
 
 
     Scene::Update(deltaTime);

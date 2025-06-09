@@ -110,94 +110,13 @@ void Player::Update()
 		sprite_.params.pos.x = RenderingPath->GetLogicalWidth();
 	}
 
+
 	////矢印の長さを１にする
 	  {
 		direction.Normalize();
 		sprite_.params.pos += direction * 400.0f * Time.deltaTime;
 	  }
-	////表示する領域のy座標のみ変更
-	//{
-	//	if (sprite_.params.drawRect.x < 256) {
-	//		sprite_.params.drawRect.x += 256;
-	//		sprite_.anim.drawRectAnim.frameRate = 4;
-	//	}
-	//}
-	//{
-	//	if (InputSystem.Keyboard.isPressed.Left)
-	//		sprite_.params.drawRect.y = 64;
-	//}
 
-	////表示する領域のｙ座標のみ変更 
-	//if (sprite_.params.drawRect.x < 256) {
-	//	sprite_.params.drawRect.x += 256;
-	//	sprite_.anim.drawRectAnim.frameRate = 4;
-	//}
-	//if (InputSystem.Keyboard.isPressed.Down) {
-	//	sprite_.params.drawRect.y = 128;
-	//	 //sprite_.params.pos.y -= 4.0f;
-	//	if (sprite_.params.drawRect.x < 256) {
-	//		sprite_.params.drawRect.x += 256;
-	//		sprite_.anim.drawRectAnim.frameRate = 4;
-	//	}
-	//}
-
-
-	//// アニメーション切り替え
-	//if (sprite_.params.pos.y < prev_pos.y) {
-	//	// 上向きの画像に切り替える
-	//	sprite_.params.drawRect.y = 128;
-	//	// 走っている画像に切り替える
-	//	if (sprite_.params.drawRect.x < 256.0f) {
-	//		sprite_.params.drawRect.x += 256.0f;
-	//		sprite_.anim.drawRectAnim.frameRate = 10;
-	//	}
-	//}
-	//else if (sprite_.params.pos.y > prev_pos.y) {
-	//	// 下向きの画像に切り替える
-	//	sprite_.params.drawRect.y = 0;
-	//	if (sprite_.params.drawRect.x < 256.0f) {
-	//		sprite_.params.drawRect.x += 256.0f;
-	//		sprite_.anim.drawRectAnim.frameRate = 10;
-	//	}
-	//}
-	//else if (sprite_.params.pos.x > prev_pos.x) {
-	//	// 右向きの画像に切り替える
-	//	sprite_.params.drawRect.y = 192;
-	//	if (sprite_.params.drawRect.x < 256.0f) {
-	//		sprite_.params.drawRect.x += 256.0f;
-	//		sprite_.anim.drawRectAnim.frameRate = 10;
-	//	}
-	//}
-	//else if (sprite_.params.pos.x < prev_pos.x) {
-	//	// 左向きの画像に切り替える
-	//	sprite_.params.drawRect.y = 64;
-	//	if (sprite_.params.drawRect.x < 256.0f) {
-	//		sprite_.params.drawRect.x += 256.0f;
-	//		sprite_.anim.drawRectAnim.frameRate = 10;
-	//	}
-	//}
-	//else {
-	//	// 移動していないとき
-	//	if (sprite_.params.drawRect.x >= 256.0f) {
-	//		sprite_.params.drawRect.x -= 256.0f;
-	//		sprite_.anim.drawRectAnim.frameRate = 2;
-	//	}
-	//}
-	////待機モーションに切り替え
-	////すべてのボタンが押されてないときは待機に移行
-	//{
-	//	if (InputSystem.Keyboard.isPressed.Right == false &&
-	//		InputSystem.Keyboard.isPressed.Left  == false &&
-	//		InputSystem.Keyboard.isPressed.Down  == false &&
-	//		InputSystem.Keyboard.isPressed.Up    == false)
-	//	{
-	//		if (sprite_.params.drawRect.x >= 256)
-	//		{
-	//			sprite_.params.drawRect.x -= 256;
-	//			sprite_.anim.drawRectAnim.frameRate = 1;
-	//		}
-	//	}
-	//}
 }
 //当たり判定
 Math::Rectangle Player::GetCollision()
@@ -228,3 +147,4 @@ void Player::SetInitialPosition()
 		RenderingPath->GetLogicalHeight() - sprite_.params.siz.y
 	);
 }
+

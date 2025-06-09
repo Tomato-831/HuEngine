@@ -10,7 +10,7 @@ using namespace HE;
 
 void Black::Load()
 {
-	sprite_ = Sprite("same.png");
+	sprite_ = Sprite("siro.png");
 	RenderingPath->AddSprite(&sprite_, -50);
 
 }

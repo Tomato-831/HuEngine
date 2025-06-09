@@ -3,7 +3,7 @@
 #include "../HuEngine.h"
 #include "../Classes/BG.h"
 #include "../Classes/Player.h"
-#include "../Classes/Redcar.h"
+#include "../Classes/Same.h"
 #include "../Classes/PlayerDate.h"
 #include "../Classes/PlayerLife.h"
 #include "../Classes/Black.h"
@@ -28,19 +28,26 @@ private:
 	Player    player_;
 	//Player_R  player_R;
 	//Player_L  player_L;
-	Redcar    redcar_;
+	Same      same_;
+	Same      same1_;
+	Same      same2_;
+	Same      same3_;
+
 
 	Black     black_;
 	Black     black2_;
 	Black     black3_;
 	Black     black4_;
 	Black     black5_;
-
 	Black     black6_;
 	Black     black7_;
 	Black     black8_;
 	Black     black9_;
 	Black     black10_;
+	Black     black11_;
+	Black     black12_;
+	Black     black13_;
+		        
 
 
 

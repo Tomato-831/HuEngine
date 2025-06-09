@@ -88,7 +88,7 @@
     <ClInclude Include="Scenes\MainScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Redcar.h">
+    <ClInclude Include="Classes\Same.h">
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="Scenes\Title.h">
@@ -150,7 +150,7 @@
     <ClCompile Include="Scenes\MainScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\Redcar.cpp">
+    <ClCompile Include="Classes\Same.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="Scenes\Title.cpp">
